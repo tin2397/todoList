@@ -21,14 +21,15 @@ export const addTodo = () => {
         const titleLabel = createElement('label', 'form-title-label', { textContent: 'Todo Title' });
         const titleInput = createElement('input', 'form-title', { 
             type: 'text',
-            placeholder: 'Enter Todo Title'
+            placeholder: 'Enter Todo Title',
+            required: true
         });
         titleContainer.append(titleLabel, titleInput);
 
         // Due date section
         const dateContainer = createElement('div', 'due-date-container');
         const dateLabel = createElement('label', 'due-date-label', { textContent: 'Due Date' });
-        const dateInput = createElement('input', 'due-date', { type: 'date' });
+        const dateInput = createElement('input', 'due-date', { type: 'date', required: true });
         dateContainer.append(dateLabel, dateInput);
 
         // Close button
@@ -42,13 +43,14 @@ export const addTodo = () => {
         const descLabel = createElement('label', 'form-description-label', { textContent: 'Description' });
         const descTextarea = createElement('textarea', 'form-description', {
             rows: 5,
-            cols: 50
+            cols: 50,
+            required: true
         });
         descContainer.append(descLabel, descTextarea);
 
         // Priority section
         const priorityContainer = createElement('div', 'checkbox-container');
-        const priorityLabel = createElement('label', 'checkbox-label', { textContent: 'Priority' });
+        const priorityLabel = createElement('label', 'checkbox-label', { textContent: 'Priority'});
         const priorityCheckbox = createElement('input', 'checkbox', { type: 'checkbox' });
         priorityContainer.append(priorityLabel, priorityCheckbox);
 
